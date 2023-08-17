@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Model2Board</display-name>
+
+	<servlet>
+		<servlet-name>registServlet</servlet-name>
+		<servlet-class>org.sp.model2board.controller.RegistServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<url-pattern>/board/regist</url-pattern>
+		<servlet-name>registServlet</servlet-name>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>editServlet</servlet-name>
+		<servlet-class>org.sp.model2board.controller.EditServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<url-pattern>/board/edit</url-pattern>
+		<servlet-name>editServlet</servlet-name>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>delServlet</servlet-name>
+		<servlet-class>org.sp.model2board.controller.DeleteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<url-pattern>/board/del</url-pattern>
+		<servlet-name>delServlet</servlet-name>
+	</servlet-mapping>
+
+
+
+	<!-- 업로드 처리 서블릿  -->
+	<servlet>
+		<servlet-name>uploadServlet</servlet-name>
+		<servlet-class>org.sp.model2board.controller.UploadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<url-pattern>/board/upload</url-pattern>
+		<servlet-name>uploadServlet</servlet-name>
+	</servlet-mapping>
+	
+</web-app>
+
+
+
